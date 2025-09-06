@@ -6,6 +6,9 @@ import RegisterPage from "./pages/RegisterPage";
 import UserDashboard from "./user/UserDashboard";
 import AddRequest from "./user/AddRequest";
 import MyRequests from "./user/MyRequest";
+import AdminDashboard from "./admin/AdminDashboard";
+import GetRequest from "./admin/GetRequest";
+
 
 function App() {
   return (
@@ -17,6 +20,9 @@ function App() {
          <Route path="/userdashboard" element={<UserDashboard />} />
          <Route path="/addrequest" element={<AddRequest />} />
         <Route path="/myrequests" element={<MyRequests />} />
+           <Route path="/admin" element={<AdminDashboard />} />
+        <Route path="/get-requests" element={<GetRequest />} />
+        
       </Routes>
     </Router>
   );
