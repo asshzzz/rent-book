@@ -15,9 +15,7 @@ const MyRequests = () => {
       <nav className="bg-teal-600 text-white px-6 py-4 flex justify-between items-center shadow-md">
         <h1 className="text-xl font-bold">RideShare - User</h1>
         <div className="space-x-4">
-          <Link to="/dashboard" className="hover:text-gray-200">Dashboard</Link>
-          <Link to="/add-request" className="hover:text-gray-200">Add Request</Link>
-          <Link to="/my-requests" className="hover:text-gray-200">My Requests</Link>
+          <Link to="/userdashboard" className="hover:text-gray-200">Dashboard</Link>
         </div>
       </nav>
 
