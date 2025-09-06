@@ -15,8 +15,8 @@ const GetRequest = () => {
       <nav className="bg-white shadow-md p-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-green-600">Admin Requests</h1>
         <div className="space-x-6">
-          <Link to="/admin" className="text-gray-700 font-medium hover:text-green-600">Dashboard</Link>
-          <Link to="/get-requests" className="text-gray-700 font-medium hover:text-green-600">Get Requests</Link>
+          <Link to="/admindashboard" className="text-gray-700 font-medium hover:text-green-600">Dashboard</Link>
+          <Link to="/getrequests" className="text-gray-700 font-medium hover:text-green-600">Get Requests</Link>
           <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
             Logout
           </button>

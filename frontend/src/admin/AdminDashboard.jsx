@@ -8,8 +8,8 @@ const AdminDashboard = () => {
       <nav className="bg-white shadow-md p-4 flex justify-between items-center">
         <h1 className="text-2xl font-bold text-purple-600">Admin Dashboard</h1>
         <div className="space-x-6">
-          <Link to="/admin" className="text-gray-700 font-medium hover:text-purple-600">Dashboard</Link>
-          <Link to="/get-requests" className="text-gray-700 font-medium hover:text-purple-600">Get Requests</Link>
+          <Link to="/admindashboard" className="text-gray-700 font-medium hover:text-purple-600">Dashboard</Link>
+          <Link to="/getrequests" className="text-gray-700 font-medium hover:text-purple-600">Get Requests</Link>
           <button className="bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
             Logout
           </button>

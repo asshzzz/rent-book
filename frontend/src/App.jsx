@@ -20,8 +20,8 @@ function App() {
          <Route path="/userdashboard" element={<UserDashboard />} />
          <Route path="/addrequest" element={<AddRequest />} />
         <Route path="/myrequests" element={<MyRequests />} />
-           <Route path="/admin" element={<AdminDashboard />} />
-        <Route path="/get-requests" element={<GetRequest />} />
+           <Route path="/admindashboard" element={<AdminDashboard />} />
+        <Route path="/getrequests" element={<GetRequest />} />
         
       </Routes>
     </Router>
