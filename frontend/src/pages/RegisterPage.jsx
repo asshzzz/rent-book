@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -29,29 +30,33 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-r from-teal-400 to-blue-500 flex flex-col">
       <Navbar />
-      <div className="flex justify-center items-center h-[80vh]">
+      <div className="flex justify-center items-center flex-1 px-4">
         <form
           onSubmit={handleRegister}
-          className="bg-white p-8 rounded-2xl shadow-lg w-96"
+          className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md"
         >
-          <h2 className="text-2xl font-bold mb-6 text-center text-teal-600">
-            Sign Up
+          <h2 className="text-2xl font-bold text-center text-teal-600 mb-2">
+            Welcome!
           </h2>
+          <p className="text-gray-500 text-center mb-6">
+            Create an account to continue your journey 🚀
+          </p>
+
           <input
             type="text"
             name="username"
             placeholder="Username"
-            className="w-full p-3 mb-4 border rounded-lg"
+            className="w-full p-3 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400"
             onChange={handleChange}
             required
           />
           <input
             type="email"
             name="email"
-            placeholder="Email"
-            className="w-full p-3 mb-4 border rounded-lg"
+            placeholder="Email Address"
+            className="w-full p-3 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400"
             onChange={handleChange}
             required
           />
@@ -59,31 +64,28 @@ const RegisterPage = () => {
             type="password"
             name="password"
             placeholder="Password"
-            className="w-full p-3 mb-4 border rounded-lg"
+            className="w-full p-3 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-teal-400"
             onChange={handleChange}
             required
           />
-          <select
-            name="role"
-            className="w-full p-3 mb-4 border rounded-lg"
-            onChange={handleChange}
-          >
-            <option value="user">User</option>
-            <option value="admin">Admin</option>
-          </select>
-          <input
-            type="file"
-            name="avatar"
-            accept="image/*"
-            className="w-full p-3 mb-4 border rounded-lg"
-            onChange={handleChange}
-          />
+          
+
           <button
             type="submit"
-            className="w-full bg-teal-600 text-white p-3 rounded-lg hover:bg-teal-700"
+            className="w-full bg-teal-600 text-white p-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
           >
             Register
           </button>
+
+          <p className="mt-6 text-center text-gray-600">
+            Already have an account?{" "}
+            <Link
+              to="/login"
+              className="font-semibold text-teal-600 hover:underline"
+            >
+              Login
+            </Link>
+          </p>
         </form>
       </div>
     </div>
