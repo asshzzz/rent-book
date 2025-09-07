@@ -1,34 +1,43 @@
 import mongoose, { Schema } from "mongoose";
 
-const bloodRequestSchema = new Schema(
+const RequestSchema = new Schema(
   {
     user: {
       type: Schema.Types.ObjectId,
-      ref: "User", // kis user ne request ki
+      ref: "User", // kis user ne request kiya
       required: true,
     },
-    hospital: {
+    vehicle: {
       type: Schema.Types.ObjectId,
-      ref: "Hospital", // kis hospital se request ki
+      ref: "Vehicle", // kaunsa bike/scooter
       required: true,
     },
-    bloodGroup: {
-      type: String,
-      required: true,
-      enum: ["A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"],
-    },
-    units: {
-      type: Number,
+    durationDays: {
+      type: Number, // kitne din ke liye rent
       required: true,
       min: 1,
+    },
+    pickupDate: {
+      type: Date,
+      required: true,
+    },
+    dropoffDate: {
+      type: Date,
+      required: true,
     },
     status: {
       type: String,
       enum: ["pending", "approved", "rejected", "completed"],
       default: "pending",
     },
+    // totalCost: {
+    //   type: Number, // auto calculate bhi kar sakte ho based on per-day rate
+    // },
   },
   { timestamps: true }
 );
 
-export const BloodRequest = mongoose.model("BloodRequest", bloodRequestSchema);
+export const RentRequest = mongoose.model(
+  "RentRequest",
+  RequestSchema
+);
