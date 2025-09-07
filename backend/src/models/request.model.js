@@ -30,9 +30,9 @@ const RequestSchema = new Schema(
       enum: ["pending", "approved", "rejected", "completed"],
       default: "pending",
     },
-    // totalCost: {
-    //   type: Number, // auto calculate bhi kar sakte ho based on per-day rate
-    // },
+    totalCost: {
+      type: Number, // auto calculate bhi kar sakte ho based on per-day rate
+    },
   },
   { timestamps: true }
 );
